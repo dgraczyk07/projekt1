@@ -1,20 +1,49 @@
-// projekt1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//ppp
-
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+
+void showPopulation(int day, int susceptible, int infected, int recovered);
+
+int main() {
+	int susceptible = 80; //liczby osób
+	int infected = 10;
+	int recovered = 10;
+	int day = 0; //numer dnia
+
+	double infectionRate = 0.20;
+	double recoveryRate = 0.10;
+
+	showPopulation(day, susceptible, infected, recovered);
+	return 0;
+	
+	int choice = 0;
+	while (true) {
+		cout << "=== Epidemic Simulator ===" << endl;
+		cout << "1. Simulate next day" << endl;
+		cout << "2. Change model parametres" << endl;
+		cout << "3. Exit" << endl;
+		cout << "Your choice: ";
+		cin >> choice;
+
+
+		switch (choice) {
+		case 1:
+				// miejsce na obliczenie kolejnego dnia
+				break;
+			case 2:
+				// miejsce na zmianę parametrów
+				break;
+			case 3:
+				cout << "Koniec programu." << endl;
+				break;
+			default:
+				cout << "Nieprawidłowa opcja! Sprobuj ponownie." << endl;
+				break;
+
+		}
+	}
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+void showPopulation(int day, int susceptible, int infected, int recovered) {
+	cout << "Dzien " << day << "| Podatni: " << susceptible << "| Zakazeni: "
+		<< infected << "| Ozdrowiency: " << recovered << endl;
+}
