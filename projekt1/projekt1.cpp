@@ -4,6 +4,7 @@ using namespace std;
 
 void showPopulation(int day, int susceptible, int infected, int recovered, int total);
 void simulateDay(int& day, int& susceptible, int& infected, int& recovered, double infectionRate, double recoveryRate);
+bool checkPopulation(int susceptible, int infected, int recovered);
 
 int main() {
 	int susceptible = 80; //liczba osób podatnych
